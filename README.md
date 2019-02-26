@@ -1,2 +1,7 @@
-# This is a notebook for practicing various nets' structure
-## Please refer to [tensorflow/models](https://github.com/tensorflow/models/tree/master/research/slim) for more wonderful codes
+# Practice coding various key parts of DL, including:
+
+## Network Structure ([tensorflow/models](https://github.com/tensorflow/models/tree/master/research/slim))
+
+## Data Augmentation
+
+## Program Organization

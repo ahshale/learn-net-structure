@@ -1,0 +1,34 @@
+{
+    "model": {
+        "input_size":           [416, 416],
+        "anchors":              [18,37, 26,110, 39,61, 55,162, 59,96, 84,132, 101,229, 122,84, 166,188],
+        "label":                ["glass", "metal", "stone"]
+    },
+
+    "train": {
+        "train_image_folder":   "path/to/your/trainset/images", 
+        "train_label_folder":   "path/to/your/trainset/labels", 
+        "train_cache":          "path/to/your/cache",
+
+        "batch_size":           8,
+        "learning_rate":        0.01, 
+        "nb_epochs":            100, 
+        "gpus":                 "0", 
+
+        "conf_threshold":       0.5, 
+        "iou_threshold":        0.5, 
+
+        "lambd_obj":            5, 
+        "lambd_noobj":          1, 
+        "lambd_xywh":           1, 
+        "lambd_class":          1, 
+
+        "saved_weights_name":   "name/of/your/trained_model"
+    }, 
+
+    "valid": {
+        "valid_image_folder":   "path/to/your/validset/images", 
+        "valid_label_folder":   "path/to/your/validset/labels", 
+        "valid_cache":          "valid_cache"
+    }
+}
