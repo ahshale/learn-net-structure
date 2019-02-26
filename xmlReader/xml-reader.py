@@ -45,7 +45,7 @@ import os
 import xml.etree.ElementTree as ET
 import pickle
 
-def parse_voc_annotation(anno_dir, cache_name, labels):
+def parse_voc_annotation(anno_dir, img_dir, cache_name, labels):
     ##########
     # format of cache
     """
@@ -94,8 +94,8 @@ def parse_voc_annotation(anno_dir, cache_name, labels):
                 continue
             
             for elem in tree.iter():
-                if 'path' in elem.tag:
-                    img['filename'] = elem.text
+                if 'filename' in elem.tag:
+                    img['filename'] = img_dir + elem.text # in case images have been removed to another dir
                 if 'width' in elem.tag:
                     img['width'] = int(elem.text)
                 if 'height' in elem.tag:
